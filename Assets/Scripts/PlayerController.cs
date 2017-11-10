@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 
@@ -17,6 +18,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
+
+		// Check if the use is not hovering the UI
+		if (EventSystem.current.IsPointerOverGameObject ())
+			return;
+
+		// If the user press left button mouse
 		if (Input.GetMouseButtonDown (0)) {
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
@@ -26,6 +33,8 @@ public class PlayerController : MonoBehaviour {
 				RemoveFocus();
 			}
 		}
+		
+		// If the user press right button mouse
 		if (Input.GetMouseButtonDown (1)) {
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
