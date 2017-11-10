@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour {
 	public Transform interactionTransform;
 
 	public virtual void Interact (){
-		Debug.Log ("Interact with " + transform.name); 
+		Debug.Log ("Interact with zqdzdq" + transform.name); 
 	}
 
 	void Update (){
