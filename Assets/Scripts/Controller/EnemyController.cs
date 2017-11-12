@@ -21,6 +21,10 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
 		float distance = Vector3.Distance (target.position, transform.position);
 
+		if (agent.velocity.magnitude > 2 && FindObjectOfType<AudioManager> ().IsPlaying("EnemyStep") == false)
+			FindObjectOfType<AudioManager> ().Play ("EnemyStep");
+		else if (agent.velocity.magnitude < 2 && FindObjectOfType<AudioManager> ().IsPlaying("EnemyStep") == true)
+			FindObjectOfType<AudioManager> ().Stop ("EnemyStep");
 		if (distance <= lookRadius) {
 			agent.stoppingDistance = 2 * .8f;
 			agent.SetDestination(target.position);

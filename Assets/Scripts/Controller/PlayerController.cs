@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-
 		// Check if the use is not hovering the UI
 		if (EventSystem.current.IsPointerOverGameObject ())
 			return;

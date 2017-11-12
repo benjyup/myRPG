@@ -19,14 +19,13 @@ public class CharacterStats : MonoBehaviour {
 		}
 	}
 
-	public void TakeDamage (int damage)
+	public virtual void TakeDamage (int damage)
 	{
 		damage -= armor.GetValue();
 		damage = Mathf.Clamp (damage, 0, int.MaxValue);
-		currentHealth -= damage;
 		Debug.Log(transform.name + " takes " + damage + " damage.");
-		if (currentHealth <= 0)
-		{
+		currentHealth -= damage;
+		if (currentHealth <= 0){
 			Die();
 		}
 	}

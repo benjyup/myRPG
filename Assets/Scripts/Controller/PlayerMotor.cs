@@ -14,6 +14,10 @@ public class PlayerMotor : MonoBehaviour {
 	}
 
 	void Update () {
+		if (agent.velocity.magnitude > 2 && FindObjectOfType<AudioManager> ().IsPlaying("PlayerStep") == false)
+			FindObjectOfType<AudioManager> ().Play ("PlayerStep");
+		else if (agent.velocity.magnitude < 2 && FindObjectOfType<AudioManager> ().IsPlaying("PlayerStep") == true)
+			FindObjectOfType<AudioManager> ().Stop ("PlayerStep");
 		if (target != null) {
 			agent.SetDestination (target.position);
 			FaceTarget();

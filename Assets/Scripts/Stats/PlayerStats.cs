@@ -27,4 +27,10 @@ public class PlayerStats : CharacterStats {
 		// Kill the player
 		PlayerManager.instance.KillPlayer ();
 	}
+
+	public override void TakeDamage(int damage)
+	{
+		base.TakeDamage (damage);
+		FindObjectOfType<AudioManager> ().Play ("PlayerHit");
+	}
 }
