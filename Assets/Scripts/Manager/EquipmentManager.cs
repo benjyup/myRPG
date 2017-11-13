@@ -15,17 +15,18 @@ public class EquipmentManager : MonoBehaviour {
 
 	public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
 	public OnEquipmentChanged onEquipmentChanged;
-	Equipment[] currentEquipment;
-
+	public Equipment[] currentEquipment;
 	SkinnedMeshRenderer[] currentMeshes;
 	public SkinnedMeshRenderer targetMesh;
 	public Equipment[] defaultItems;
 
 	Inventory inventory;
+	EquipmentUI equipmentUI;
 	void Start ()
 	{
+		equipmentUI = EquipmentUI.instance;
 		inventory = Inventory.instance;
-		int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+		int numSlots = System.Enum.GetNames(typeof(EquipmentSlots)).Length;
 		currentEquipment = new Equipment[numSlots];
 		currentMeshes = new SkinnedMeshRenderer[numSlots];
 		EquipDefaultItems ();
@@ -50,13 +51,11 @@ public class EquipmentManager : MonoBehaviour {
 		}
 		SetEquipmentBlendShapes (newItem, 100);
 		currentEquipment [slotIndex] = newItem;
-
 		SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer> (newItem.mesh);
 		newMesh.transform.parent = targetMesh.transform;
 		newMesh.bones = targetMesh.bones;
 		newMesh.rootBone = targetMesh.rootBone;
 		currentMeshes [slotIndex] = newMesh;
-		Debug.Log ("Try to equip a " + newItem.name);
 	}
 
 	public Equipment Unequip(int slotIndex)
@@ -83,6 +82,7 @@ public class EquipmentManager : MonoBehaviour {
 
 	public void UnequipAll()
 	{
+		equipmentUI.RemoveAllItems ();
 		for (int i = 0; i < currentEquipment.Length; i++)
 			Unequip (i);
 		EquipDefaultItems ();

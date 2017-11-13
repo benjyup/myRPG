@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224555125511509074}
-  - component: {fileID: 114008874848021532}
+  - component: {fileID: 114137389159645774}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -80,7 +80,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114008874848021532
+--- !u!114 &114137389159645774
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114008874848021532}
+      - m_Target: {fileID: 114137389159645774}
         m_MethodName: OnRemoveButton
         m_Mode: 1
         m_Arguments:
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114008874848021532}
+      - m_Target: {fileID: 114137389159645774}
         m_MethodName: UseItem
         m_Mode: 1
         m_Arguments:
@@ -311,10 +311,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 44, y: -75}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224704450069843022
 RectTransform:

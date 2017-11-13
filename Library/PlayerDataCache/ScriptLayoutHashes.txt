@@ -45,6 +45,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Menu
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -77,6 +78,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+c0af6efed1dc88f25faadd0367835354 Assembly-CSharp.dll:.DayAndNightControl
 3ecea0c2e43f5d97a17c441bfcf59a7d Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingBehaviour
 892e58ca45bde3fda5f9f19c7095e58c Assembly-CSharp.dll:.PlayerStats
 24bb26e7da03092690ef38ebcd7ec1c0 Assembly-CSharp.dll:.Minimap
@@ -93,6 +95,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Credits
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -109,6 +112,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 cee5cf52f5fe78326e181f4e098608e0 Assembly-CSharp.dll:.InventorySlot
 d31aa7a76c63b42781c16cb3812ba817 Assembly-CSharp.dll:.Interactable
+4d286a2c5acf09fbdcedf18a3f356c81 Assembly-CSharp.dll:.VisualClockController
 2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.PlayerManager
 f0d23d0511d809ea08cbea60ec379e0e Assembly-CSharp.dll:.CharacterCombat
 1c0ee6335e0aa74b089b4aaeaf21ad78 Assembly-CSharp.dll:.CameraController
@@ -153,7 +157,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 1f28ed6ea4b2fff22d4894bb068e4f7c Assembly-CSharp.dll:.InventoryUI
 f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerMotor
-f0df71a62ffff51e4630d80c705651c3 Assembly-CSharp.dll:.EquipmentManager
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Credits
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Menu
 01977cc2bf8607f6bef88066194cf672 Assembly-CSharp.dll:.LevelLoader
+08d10b5e6211a84efa50bd7534a38579 Assembly-CSharp.dll:.EquipmentManager
+044c4c22cebb33267b6c088837d7ed63 Assembly-CSharp.dll:.EquipmentSlot
+71bec8e2dfa2452bc47dc1171bf5181d Assembly-CSharp.dll:.EquipmentUI
