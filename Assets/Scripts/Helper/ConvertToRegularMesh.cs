@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class permit to see in the scene a mesh by convert it
 public class ConvertToRegularMesh : MonoBehaviour {
 
 	[ContextMenu("Convert to regular mesh")]

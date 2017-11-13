@@ -7,24 +7,27 @@ public class InventorySlot : MonoBehaviour {
 	public Image icon;
 	public Button removeButton;
 
-	public void AddItem (Item newItem)
-	{
+	// Add the item to the InventoryGUI
+	public void AddItem (Item newItem){
 		item = newItem;
 		icon.sprite = item.icon;
 		icon.enabled = true;
 		removeButton.interactable = true;
 	}
-	public void ClearSlot ()
-	{
+
+	// Remove the item from the InventoryGUI
+	public void ClearSlot (){
 		item = null;
 		icon.sprite = null;
 		icon.enabled = false;
 		removeButton.interactable = false;
 	}
 
-	public void OnRemoveButton()
-	{
+	// Remove the item from inventory
+	public void OnRemoveButton(){
 		Inventory.instance.Remove (item);
+		//To do
+			// Drop the item in the floor
 	}
 
 	public void UseItem()

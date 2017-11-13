@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour {
 	InventorySlot[] slots;
 	public GameObject inventoryUI;
 
+	// Called at the initialization
 	void Start () {
 		inventory = Inventory.instance;
 		inventory.onItemChangedCallback += UpdateUI;
@@ -20,6 +21,7 @@ public class InventoryUI : MonoBehaviour {
 			inventoryUI.SetActive (!inventoryUI.activeSelf);
 	}
 
+	// Update the UI
 	void UpdateUI()
 	{
 		for (int i = 0; i < slots.Length; i++) {

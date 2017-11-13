@@ -11,18 +11,18 @@ public class CharacterCombat : MonoBehaviour {
 	public float attackDelay = .6f;
 	public event System.Action OnAttack;
 
-	void Start ()
-	{
+	// Called at initialization
+	void Start (){
 		myStats = GetComponent<CharacterStats> ();
 	}
 
-	void Update ()
-	{
+	// Called each frame
+	void Update (){
 		attackCooldown -= Time.deltaTime;
 	}
 
-	public void Attack (CharacterStats targetStats)
-	{
+	// Update the amount of health when hit
+	public void Attack (CharacterStats targetStats){
 		if (attackCooldown <= 0f) {
 			StartCoroutine(DoDamage(targetStats, attackDelay));
 			if (OnAttack != null)
@@ -31,6 +31,7 @@ public class CharacterCombat : MonoBehaviour {
 		}
 	}
 
+	// The coroutine with a delay to let the animation works properly
 	IEnumerator DoDamage (CharacterStats stats, float delay)
 	{
 		yield return new WaitForSeconds (delay);

@@ -3,14 +3,13 @@
 public class ItemPickUp : Interactable {
 	public Item item;
 
-	public override void Interact()
-	{
+	public override void Interact(){
 		base.Interact ();
 		PickUp ();
 	}
 
-	void PickUp()
-	{
+	//Pick the object from ground and destroy it from the scene
+	void PickUp(){
 		if (Inventory.instance.Add (item))
 			Destroy (gameObject);
 	}

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Credits : MonoBehaviour {
-	public void Quit()
-	{
+	// Exit the game
+	public void Quit(){
 		Application.Quit();
 	}
 }

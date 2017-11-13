@@ -9,15 +9,16 @@ public class EquipmentUI : MonoBehaviour {
 	EquipmentSlot[] slots;
 	public GameObject equipmentUI;
 
+	// Permit to access this class instance in other classes
 	#region Singleton
 	public static EquipmentUI instance;
 	
-	void Awake()
-	{
+	void Awake(){
 		instance = this;
 	}
 	#endregion
 
+	// Called at initialization
 	void Start () {
 		inventory = Inventory.instance;
 		inventory.onItemChangedCallback += UpdateUI;
@@ -32,6 +33,7 @@ public class EquipmentUI : MonoBehaviour {
 
 	public void AddItem(Equipment item)
 	{
+		// We check the type of the item to send it to the correct slot int the EquipmentGUI
 		switch ((int)item.equipSlot)
 		{
 		case 0:
@@ -57,6 +59,7 @@ public class EquipmentUI : MonoBehaviour {
 		}
 	}
 
+	// Clear the slot when the player hit the 'U' button
 	public void RemoveAllItems()
 	{
 		for (int i = 0; i < slots.Length; i++) {
@@ -64,6 +67,7 @@ public class EquipmentUI : MonoBehaviour {
 		}
 	}
 
+	// Do not touch!
 	void UpdateUI()
 	{
 		//for (int i = 0; i < slots.Length; i++) {

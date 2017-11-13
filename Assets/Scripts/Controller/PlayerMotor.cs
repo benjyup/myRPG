@@ -14,6 +14,7 @@ public class PlayerMotor : MonoBehaviour {
 	}
 
 	void Update () {
+		//Playing the walk sound when the player is moving
 		if (agent.velocity.magnitude > 2 && FindObjectOfType<AudioManager> ().IsPlaying("PlayerStep") == false)
 			FindObjectOfType<AudioManager> ().Play ("PlayerStep");
 		else if (agent.velocity.magnitude < 2 && FindObjectOfType<AudioManager> ().IsPlaying("PlayerStep") == true)
@@ -33,13 +34,14 @@ public class PlayerMotor : MonoBehaviour {
 		agent.updateRotation = false;
 		target = newTarget.interactionTransform;
 	}
-	
+
 	public void StopFollowingTarget(){
 		agent.stoppingDistance = 0f;
 		agent.updateRotation = true;
 		target = null;
 	}
 
+	// This method permit to properly and smoothly face the target
 	void FaceTarget ()
 	{
 		Vector3 direction = (target.position - transform.position).normalized;

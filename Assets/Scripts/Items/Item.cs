@@ -6,12 +6,10 @@ public class Item : ScriptableObject {
 	public Sprite icon = null;
 	public bool isDefaultItem = false;
 
-	public virtual void Use()
-	{
+	public virtual void Use(){
 	}
 
-	public void RemoveFromInventory()
-	{
+	public void RemoveFromInventory(){
 		Inventory.instance.Remove (this);
 	}
 }

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		// Check if the use is not hovering the UI
+		// Check if the use is not hovering the UI to prevent from deplacement
 		if (EventSystem.current.IsPointerOverGameObject ())
 			return;
 
@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 
+			// We check if he can go to the point clicked
 			if (Physics.Raycast(ray, out hit, 100, movementMask)){
 				motor.MoveToPoint(hit.point);
 				RemoveFocus();
@@ -40,7 +41,6 @@ public class PlayerController : MonoBehaviour {
 
 			if (Physics.Raycast(ray, out hit, 100, movementMask)){
 				Interactable interactable = hit.collider.GetComponent<Interactable>();
-
 				if (interactable != null){
 					SetFocus(interactable);
 				}
@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	// Focus an object which is interactable
 	void SetFocus(Interactable newFocus){
 		if (newFocus != focus) {
 			if (focus != null)
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour {
 		focus.OnFocused (transform);
 	}
 
+	// Remove focus from an interactable object
 	void RemoveFocus(){
 		if (focus != null)
 			focus.OnDefocused ();

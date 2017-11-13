@@ -8,8 +8,8 @@ public class LevelLoader : MonoBehaviour {
 	public Slider	slider;
 	public Text		progressText;
 
-	public void LoadLevel(int sceneIndex)
-	{
+	// Permit to use the loading scene data to print a loading bar
+	public void LoadLevel(int sceneIndex){
 		StartCoroutine (LoadAsynchronously (sceneIndex));
 	}
 
